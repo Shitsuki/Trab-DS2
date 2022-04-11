@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head') %>
+
+<body>
+    <%- include('includes/navbar') %>    
+    <div class="det">
+    <table id="detalha">
+        <tr>
+            <td>Comum Engraving:</td>
+            <td>Class Engraving:</td>
+            <td>Status:</td>
+        </tr>
+        <tr>
+            <td><%= filme.engraving1 %></td>
+            <td><%= filme.engraving2 %></td>
+            <td><%= filme.status %></td>
+        </tr>
+    </table>
+    <% if (user) { %>
+    <% if (user.tipo == "ADM") { %>
+    <a href="/filmes/alterar/<%= filme.id %>">ALTERAR</a>
+    <a href="/filmes/deletar/<%= filme.id %>">DELETAR</a>
+    <% } } %>
+    
+
+    </div>
+</body>
+</html>

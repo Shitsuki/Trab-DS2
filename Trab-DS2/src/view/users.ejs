@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head') %>
+
+    <body>
+        <div class="itens">
+
+            <%- include('includes/navbar') %>
+
+                <table id="filmes">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Password</th>                          
+                            <% if (user.tipo == "ADM" ) { %>
+                            <th></th>
+                            <% } %>
+                        </tr>
+                        <% if (user) { %>
+                        <% users.forEach(user => { %>
+                            <tr>
+                                <td>
+                                    <%= user.nome %>
+                                </td>
+                                <td>
+                                    <%= user.email %>
+                                </td>
+                                <% if (user.tipo=="User" ) { %>
+                                <td>
+                                    <%= user.senha %>
+                                </td>            
+                                <% }else {%>
+                                    <td>******</td>
+                                <% } %>
+                                <% if (user.tipo == "User" ) { %>
+                                <td>
+                                    <input type="submit" value="&#10060;">
+                                </td>
+                                <% }else {%>]
+                                    <td>
+                                        <%= user.tipo %>
+                                    </td>
+                                <% } %>
+                            </tr>
+                        <% }) %>
+                        <% } %>
+                </table>
+        </div>
+    </body>
+
+</html>

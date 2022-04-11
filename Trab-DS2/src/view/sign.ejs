@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head') %>
+
+    <body>
+        <%- include('includes/navbar') %>
+        <div class="cadas">
+            <h1>Cadastro</h1>
+            <br /><br />
+
+            <form action="/users/cadastrar" method="post">
+                <label for="nome">Nome</label>
+                <input type="name" name="nome" id="name">
+                <br /><br />
+                <label for="email">Email</label>
+                <input type="email" name="email" id="name">
+                <br /><br />
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="name">
+                <br /><br />
+                <label for="tipo">Type</label>
+                <select type="text" name="tipo">
+                    <option value="User">User</option>
+                    <option value="ADM">ADM</option>
+                </select>
+                <br /><br />
+
+                <input type="submit" value="SIGN" />
+            </form>
+
+            <br />
+            <hr><br />
+            </div>
+    </body>
+
+</html>

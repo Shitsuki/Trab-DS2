@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head') %>
+
+<body>
+
+    <%- include('includes/navbar') %>
+
+    <div class="cadas">
+    <h1 style="text-align: center;">REGISTER ITEM</h1><br>
+    <form action="/filmes" method="POST">
+        <label for="name">Name: </label>
+        <tr><input type="text" name="name" id="name"></tr>
+
+        <label for="tier">Tier:</label>
+        <select id="tier" name="tier">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <label for="quality">Quality: </label>
+        <input type="text" name="quality" id="quality">
+
+        <label for="price">Price: </label>
+        <input type="number" name="price" maxlength="3" id="price">
+        
+        <label for="date">Date: </label>
+        <input type="date" name="date">
+
+        <label for="engraving1">Normal Engraving: </label>
+        <select id="engraving1" name="engraving1">
+            <option value="Disrespect">Disrespect</option>
+            <option value="Spirit Absortion">Spirit Absortion</option>
+            <option value="Ether Enhancement">Ether Enhancement</option>
+            <option value="Stabilized Status">Stabilized Status</option>
+            <option value="Grudge">Grudge</option>
+            <option value="Super Charge">Super Charge</option>
+            <option value="Strong Will">Strong Will</option>
+            <option value="Drops of Ether">Drops of Ether</option>
+            <option value="Crisis Evasion">Crisis Evasion</option>
+            <option value="Keen Blunt Weapon">Keen Blunt Weapon</option>
+            <option value="Vital Point Strike">Vital Point Strike</option>
+            <option value="Increased Max MP">Increased Max MP</option>
+            <option value="MP Regen">MP Regen</option>
+            <option value="Master of Escape">Master of Escape</option>
+            <option value="Fortitude">Fortitude</option>
+            <option value="Crushing Fist">Crushing Fist</option>
+            <option value="Shield Piercing">Shield Piercing</option>
+            <option value="Master's Tenacity">Master's Tenacity</option>
+            <option value="Divine Protection">Divine Protection</option>
+            <option value="Heavy Armor">Heavy Armor</option>
+            <option value="Explosive Expert">Explosive Expert</option>
+            <option value="Enhanced Shield">Enhanced Shield</option>
+            <option value="Necromancy">Necromancy</option>
+            <option value="Preemptive">Preemptive Strike</option>
+            <option value="Broken Bone">Broken Bone</option>
+            <option value="Lightning Fury">Lightning Fury</option>
+            <option value="Cursed Doll">Cursed Doll</option>
+            <option value="Contender">Contender</option>
+            <option value="Ambush Master">Ambush Master</option>
+            <option value="Magick Stream">Magick Stream</option>
+            <option value="Barricade">Barricade</option>
+            <option value="Raid Captain">Raid Captain</option>
+            <option value="Awakenig">Awakenig</option>
+            <option value="Master Brawler">Master Brawler</option>
+        </select>
+
+        <label for="engraving2">Class Engraving: </label>
+        <select id="engraving2" name="engraving2">
+            <option value="Mayhem">Mayhem</option>
+            <option value="Berserker's Technique">Berserker's Technique</option>
+            <option value="Enhanced Weapon">Enhanced Weapon</option>
+            <option value="Pistoleer">Pistoleer</option>
+            <option value="Esoteric Skill Enhancement">Esoteric Skill Enhancement</option>
+            <option value="Firts Intention">Firts Intention</option>
+            <option value="Ultimate Skill: Taijutsu">Ultimate Skill: Taijutsu</option>
+            <option value="Shock Training">Shock Training</option>
+            <option value="Barrage">Barrage</option>
+            <option value="Firepower Enhancement">Firepower Enhancement</option>
+            <option value="True Courage">True Courage</option>
+            <option value="Desperate Salavation">Desperate Salavation</option>
+            <option value="Reflux">Reflux</option>
+            <option value="Igniter">Igniter</option>
+            <option value="Esoteric">Esoteric Flurry</option>
+            <option value="Deathblow">Deathblow</option>
+            <option value="Time To Hunt">Time To Hunt</option>
+            <option value="Peacemaker">Peacemaker</option>
+            <option value="Blessed Aura">Blessed Aura</option>
+            <option value="Judgment">Judgment</option>
+            <option value="Demonic Impulse">Demonic Impulse</option>
+            <option value="Perfect Suppression">Perfect Suppression</option>
+            <option value="Surge">Surge</option>
+            <option value="Remaining Energy">Remaining Energy</option>
+            <option value="Death Strike">Death Strike</option>
+            <option value="Loyal Companion">Loyal Companion</option>
+            <option value="Energy Overflow">Energy Overflow</option>
+            <option value="Robust Spirit">Robust Spirit</option>
+            <option value="Lone Knight">Lone Knight</option>
+            <option value="Combat Readiness">Combat Readiness</option>
+        </select>
+        
+        <label for="status">Status</label>
+        <select id="status" name="status">
+            <option value="Critical">Critical</option>
+            <option value="Specialty">Specialty</option>
+            <option value="Subdue">Subdue</option>
+            <option value="Agility">Agility</option>
+            <option value="Endurance">Endurance</option>
+            <option value="Proficiency">Proficiency</option>
+        </select>
+
+        <input type="submit" value="REGISTER">
+        <br /><br />        
+        </div>
+    </form>
+
+</body>
+</html>

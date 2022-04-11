@@ -1,0 +1,25 @@
+<header>
+    <img src="https://d1glcu56fxkf6q.cloudfront.net/statics/2022-03-23/images/LostArkLogo.png" id="icon">
+    <h1 id="nav-title"></h1>
+    <nav>
+        <ul>
+            <% if (user) { %>
+                <% if (user.tipo == "User") { %>  
+                    <li><a href="/filmes/profile">PROFILE: <%= user.nome %></a></li>
+                    <li><a href="/filmes">ITENS</a></li>
+                    <li><a href="/users/logout">LOGOUT</a></li>
+                <% }else if (user.tipo == "ADM") { %>
+                    <li><a href="/filmes/profile">ADMIN PROFILE: <%= user.nome %></a></li>
+                    <li><a href="/filmes">ITENS</a></li>
+                    <li><a href="/filmes/cadastrar">INSERT ITEM</a></li>
+                    <li><a href="/users">USERS</a></li>
+                    <li><a href="/users/logout">LOGOUT</a></li>
+                <% } %>
+            <% } else {%>
+                <li><a href="/filmes">ITENS</a></li>
+                <li><a href="/users/login">LOGIN</a></li>
+                <li><a href="/users/signup">SIGN UP</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</header>

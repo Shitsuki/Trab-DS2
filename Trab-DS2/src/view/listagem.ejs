@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head') %>
+
+<body>
+  <div class="itens">
+
+    <%- include('includes/navbar') %>    
+
+    <table id="filmes">
+        <tr>
+          <th>Name</th>
+          <th>Tier</th>
+          <th>Quality</th>
+          <th>Price</th>
+          <th>Date</th>
+          <th>
+            <form action="/filmes/search" method="POST">
+              <input type="submit" value=&#128270; id="pesq"><input type="text" name="search">
+            </form>
+          </th>
+          <% if (user) { %>
+            <% if (user.tipo == "User") { %>
+              <th></th>
+            <% } %>
+          <% } %>
+          </tr>
+        <% filmes.forEach(filme => { %>
+          <tr>
+            <form action="/filmes/comprar" method="POST">
+              <td><%= filme.name %></td>
+              <td><%= filme.tier %></td>
+              <td><%= filme.quality %></td>
+              <td>$<%= filme.price %></td>
+              <td><%= filme.date %></td>
+              <td> <a href="/filmes/<%= filme.id %>" id="detalhes"> MORE </a> </td>
+              <% if (user.tipo=="User" ) { %>
+                <td> <a href="/filmes/comprar/<%= filme.id %>/<%= user.email %>" id="detalhes">&#9989;</a> </td>
+              <% } %>
+            </form>
+          </tr>
+        <% }) %>
+    </table>
+    </div>
+</body>
+
+</html>
